@@ -2,34 +2,20 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const NavBar = () => {
-  const router = useRouter();
+  const { pathname } = useRouter();
 
   return (
-    <nav className="flex shadow-lg items-center bg-black-1 h-10 min-w-screen mb-5">
-      <Link href="/">
-        <a
-          className={`flex-1 ml-5 ${
-            router.pathname === '/' ? 'font-black' : ''
-          }`}
-        >
-          home
-        </a>
-      </Link>
+    <nav className="flex shadow-lg items-center bg-black-1 h-10 min-w-screen px-5">
+      <div className="flex-1">
+        <Link href="/">
+          <a className={`${pathname === '/' ? 'underline' : ''}`}>home</a>
+        </Link>
+      </div>
       <Link href="/blog">
-        <a
-          className={`flex-2 float-right ${
-            router.pathname === '/blog' ? 'font-black' : ''
-          }`}
-        >
-          blog
-        </a>
+        <a className={`${pathname === '/blog' ? 'underline' : ''}`}>blog</a>
       </Link>
       <Link href="/projects">
-        <a
-          className={`flex-2 ml-5 mr-5 float-right ${
-            router.pathname === '/projects' ? 'font-black' : ''
-          }`}
-        >
+        <a className={`ml-5 ${pathname === '/projects' ? 'underline' : ''}`}>
           projects
         </a>
       </Link>

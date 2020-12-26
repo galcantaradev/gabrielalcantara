@@ -1,6 +1,6 @@
 const Bio = () => {
   return (
-    <section className="mt-40 text-center">
+    <section className="flex flex-col items-center py-20">
       <p>A Software Engineer</p>
       <p>Web Developer</p>
       <p>React.js Enthusiast</p>

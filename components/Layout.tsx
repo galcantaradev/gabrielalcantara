@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 
-import NavBar from '../components/NavBar';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 interface Props {
   children: ReactNode;
@@ -9,14 +10,13 @@ interface Props {
 
 const Layout = (props: Props) => {
   return (
-    <div className="min-h-screen min-w-screen bg-black-2 text-white text-lg">
+    <div className="min-h-screen min-w-screen bg-black-2 text-white text-lg flex flex-col">
       <Head>
         <title>Gabriel Alcântara</title>
       </Head>
-
       <NavBar />
-
-      {props.children}
+      <div className="pt-5 flex-1">{props.children}</div>
+      <Footer />
     </div>
   );
 };
