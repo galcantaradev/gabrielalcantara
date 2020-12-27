@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "alias": "gabrielalcantara.com.br",
   "version": "0.1.0",
   "private": true,
   "scripts": {
