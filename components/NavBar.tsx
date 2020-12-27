@@ -5,7 +5,7 @@ const NavBar = () => {
   const { pathname } = useRouter();
 
   return (
-    <nav className="sticky flex shadow-md items-center justify-end bg-black-1 h-12 min-w-screen bg-transparent">
+    <nav className="fixed top-0 w-screen flex shadow-md items-center justify-end bg-black-1 h-12 min-w-screen bg-transparent">
       <Link href="/">
         <a className={`${pathname === '/' ? 'text-indigo-400' : ''}`}>about</a>
       </Link>

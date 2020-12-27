@@ -2,7 +2,7 @@ import PreviewItem from './PreviewItem';
 
 const Preview = () => {
   return (
-    <section className="flex justify-around mt-10 text-center">
+    <section className="flex justify-around mt-5 text-center">
       <PreviewItem
         sectionTitle="Recent post"
         title="Post title"

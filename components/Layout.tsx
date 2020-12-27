@@ -15,7 +15,7 @@ const Layout = (props: Props) => {
         <title>Gabriel Alcântara</title>
       </Head>
       <NavBar />
-      <div className="pt-5 flex-1">{props.children}</div>
+      <div className="pt-10 flex-1 mt-12">{props.children}</div>
       <Footer />
     </div>
   );

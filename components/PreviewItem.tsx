@@ -7,7 +7,7 @@ interface Props {
 const PreviewItem = ({ sectionTitle, title, description }: Props) => {
   return (
     <div className="w-6/12 relative p-5 max-h-52">
-      <h1 className="text-center absolute top-0 left-0 right-0 text-2xl">
+      <h1 className="text-center absolute top-0 left-0 right-0 text-2xl underline">
         {sectionTitle}
       </h1>
       <div className="flex flex-row p-10">
