@@ -5,17 +5,21 @@ const NavBar = () => {
   const { pathname } = useRouter();
 
   return (
-    <nav className="flex shadow-lg items-center bg-black-1 h-10 min-w-screen px-5">
-      <div className="flex-1">
-        <Link href="/">
-          <a className={`${pathname === '/' ? 'underline' : ''}`}>home</a>
-        </Link>
-      </div>
+    <nav className="sticky flex shadow-md items-center justify-end bg-black-1 h-12 min-w-screen bg-transparent">
+      <Link href="/">
+        <a className={`${pathname === '/' ? 'text-indigo-400' : ''}`}>about</a>
+      </Link>
       <Link href="/blog">
-        <a className={`${pathname === '/blog' ? 'underline' : ''}`}>blog</a>
+        <a className={`ml-5 ${pathname === '/blog' ? 'text-indigo-400' : ''}`}>
+          blog
+        </a>
       </Link>
       <Link href="/projects">
-        <a className={`ml-5 ${pathname === '/projects' ? 'underline' : ''}`}>
+        <a
+          className={`mx-5 ${
+            pathname === '/projects' ? 'text-indigo-400' : ''
+          }`}
+        >
           projects
         </a>
       </Link>

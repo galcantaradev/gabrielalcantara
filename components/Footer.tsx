@@ -50,7 +50,7 @@ const items: FooterItem[] = [
 
 const Footer = () => {
   return (
-    <footer className="flex text-center justify-evenly py-5 min-w-screen">
+    <footer className="fixed right-0 left-0 bottom-0 text-center py-2 bg-black shadow-md border-t-2">
       {items.map((item: FooterItem) => {
         const link = item.label === 'Email' ? `mailto:${item.link}` : item.link;
 
@@ -60,12 +60,12 @@ const Footer = () => {
             target="_blank"
             key={item.label}
             title={item.label}
-            className="cursor-pointer"
+            className="cursor-pointer mx-5"
           >
             <FontAwesomeIcon
-              icon={item.icon}
               size="lg"
-              className="hover:text-gray-300 transition-all"
+              icon={item.icon}
+              className="hover:text-indigo-400 transition-all duration-300"
             />
           </a>
         );
