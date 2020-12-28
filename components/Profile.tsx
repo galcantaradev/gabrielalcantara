@@ -1,13 +1,13 @@
 const Profile = () => {
   return (
-    <section className="flex flex-col items-center">
-      <div className="pb-10">
+    <section className="text-center">
+      <div className="pb-5 md:pb-10 lg:pb-10">
         <img
           width="110"
           height="110"
           src="/gabriel.jpeg"
           alt="Profile Picture"
-          className="rounded-full"
+          className="rounded-full mx-auto"
         />
       </div>
 
