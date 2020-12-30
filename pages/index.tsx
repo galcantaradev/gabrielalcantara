@@ -1,9 +1,9 @@
 import Layout from '../components/Layout';
 import Profile from '../components/Profile';
 import Bio from '../components/Bio';
-// import Preview from '../components/Preview';
+import Preview from '../components/Preview';
 
-const Home = () => {
+const About = () => {
   return (
     <Layout>
       <Profile />
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

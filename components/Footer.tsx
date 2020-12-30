@@ -50,7 +50,7 @@ const items: FooterItem[] = [
 
 const Footer = () => {
   return (
-    <footer className="fixed right-0 left-0 bottom-0 text-center py-2 bg-black shadow-md border-t-2 w-screen">
+    <footer className="right-0 left-0 bottom-0 text-center py-2 bg-black shadow-md border-t-2 w-screen h-12">
       {items.map((item: FooterItem) => {
         const link = item.label === 'Email' ? `mailto:${item.link}` : item.link;
 

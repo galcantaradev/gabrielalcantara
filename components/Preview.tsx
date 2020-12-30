@@ -2,7 +2,7 @@ import PreviewItem from './PreviewItem';
 
 const Preview = () => {
   return (
-    <section className="flex flex-col sm:flex-col md:flex-row lg:flex-row mt-5 text-center">
+    <section className="flex flex-col sm:flex-col md:flex-row lg:flex-row text-center">
       <PreviewItem
         sectionTitle="Recent post"
         title="Post title"

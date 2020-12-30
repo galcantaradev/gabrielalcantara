@@ -1,7 +1,7 @@
 const Profile = () => {
   return (
     <section className="text-center">
-      <div className="pb-5 md:pb-10 lg:pb-10">
+      <div className="pb-5">
         <img
           width="110"
           height="110"
