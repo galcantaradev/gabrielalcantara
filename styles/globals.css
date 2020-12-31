@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'nprogress/nprogress.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap';
 
 html,
 body {

@@ -3,9 +3,9 @@ const Profile = () => {
     <section className="text-center">
       <div className="pb-5">
         <img
+          src="https://ufh6j211.cdn.imgeng.in/gabriel.jpeg"
           width="110"
           height="110"
-          src="/gabriel.jpeg"
           alt="Profile Picture"
           className="rounded-full mx-auto"
         />
