@@ -6,7 +6,7 @@ interface Props {
 
 const PreviewItem = ({ sectionTitle, title, description }: Props) => {
   return (
-    <div className="sm:w-screen md:w-6/12 relative p-5">
+    <div className="sm:w-screen md:w-6/12 relative mb-5">
       <h1 className="text-center text-2xl underline">{sectionTitle}</h1>
       <div className="flex flex-row p-3">
         <div className="w-full">

@@ -8,7 +8,7 @@ const About = () => {
     <Layout>
       <Profile />
       <Bio />
-      {/* <Preview /> */}
+      <Preview />
     </Layout>
   );
 };
