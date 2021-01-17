@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 const Profile = () => {
   return (
     <section className="text-center">
       <div className="pb-5">
-        <img
-          src="https://ufh6j211.cdn.imgeng.in/gabriel.jpeg"
+        <Image
+          src="https://avatars3.githubusercontent.com/u/70175175?s=460&u=fe4c08b6d401b392cc7117fe7ffce0f4f1f695e4&v=4"
           width="110"
           height="110"
           alt="Profile Picture"
