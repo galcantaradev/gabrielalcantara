@@ -1,20 +1,36 @@
-import Head from 'next/head';
 import { ReactNode } from 'react';
+import Head from 'next/head';
+import styled from 'styled-components';
 
-interface Props {
+import NavBar from './NavBar';
+
+interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout = (props: Props) => {
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+`;
+
+const Content = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  width: 42rem;
+`;
+
+const Layout = (props: LayoutProps) => {
   return (
-    <div className="bg-black-2 text-white text-lg">
+    <Container>
       <Head>
         <title>Gabriel Alcântara</title>
       </Head>
-      <div className="flex flex-col justify-center items-center min-h-screen">
+      <Content>
+        <NavBar />
         {props.children}
-      </div>
-    </div>
+      </Content>
+    </Container>
   );
 };
 
