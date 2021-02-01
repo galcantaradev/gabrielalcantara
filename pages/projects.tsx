@@ -1,12 +1,13 @@
 import { gql } from '@apollo/client';
 import { GetStaticProps } from 'next';
 import { Fragment } from 'react';
-import { Layout, SectionTitle } from '../components';
+
+import { Layout } from '../components';
 import { apolloClient } from '../lib';
-import { Project } from '../types';
+import { IProject } from '../types';
 
 interface Props {
-  projects: Project[];
+  projects: IProject[];
 }
 
 const PROJECTS_QUERY = gql`
@@ -26,19 +27,14 @@ const PROJECTS_QUERY = gql`
 const Projects = (props: Props) => {
   return (
     <Layout>
-      <SectionTitle>Projetos</SectionTitle>
-      {props.projects.length > 0 ? (
-        props.projects.map(project => {
-          return (
-            <Fragment>
-              <h3>{project.name}</h3>
-              <p>{project.description}</p>
-            </Fragment>
-          );
-        })
-      ) : (
-        <h3>Ainda não há projetos publicados.</h3>
-      )}
+      {props.projects.map(project => {
+        return (
+          <Fragment key={project.id}>
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+          </Fragment>
+        );
+      })}
     </Layout>
   );
 };

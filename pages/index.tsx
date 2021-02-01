@@ -1,9 +1,9 @@
-import { Layout, SectionTitle } from '../components';
+import { Layout } from '../components';
 
 const Home = () => {
   return (
     <Layout>
-      <SectionTitle>E aí!</SectionTitle>
+      <h2>E aí!</h2>
       <p>
         Me chamo Gabriel, sou engenheiro de software e desenvolvedor front-end.
       </p>

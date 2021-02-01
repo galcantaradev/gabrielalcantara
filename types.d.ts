@@ -1,4 +1,4 @@
-export interface Post {
+export interface IPost {
   id: string;
   title: string;
   description: string;
@@ -9,7 +9,7 @@ export interface Post {
   updatedAt: string;
 }
 
-export interface Project {
+export interface IProject {
   id: string;
   name: string;
   description: string;

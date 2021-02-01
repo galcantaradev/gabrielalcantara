@@ -1,14 +1,14 @@
 import { gql } from '@apollo/client';
+import { Fragment } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import { Fragment } from 'react';
 
 import { apolloClient } from '../../lib';
-import { Layout, SectionTitle } from '../../components';
-import { Post } from '../../types';
+import { Layout } from '../../components';
+import { IPost } from '../../types';
 
 interface Props {
-  posts: Post[];
+  posts: IPost[];
 }
 
 const POSTS_QUERY = gql`
@@ -30,7 +30,6 @@ const Posts = (props: Props) => {
 
   return (
     <Layout>
-      <SectionTitle>Publicações</SectionTitle>
       {props.posts.map(post => {
         return (
           <Fragment key={post.id}>

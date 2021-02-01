@@ -3,11 +3,11 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Layout, SectionTitle } from '../../components';
 import { apolloClient } from '../../lib';
-import { Post } from '../../types';
 import { toPaths } from '../../utils';
+import { IPost } from '../../types';
 
 interface Props {
-  post: Post;
+  post: IPost;
 }
 
 const POSTS_QUERY = gql`
@@ -33,7 +33,7 @@ const POST_BY_ID_QUERY = gql`
   }
 `;
 
-const PostDetails = ({ post }: Props) => {
+const Post = ({ post }: Props) => {
   return (
     <Layout>
       <SectionTitle>{post.title}</SectionTitle>
@@ -47,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     query: POSTS_QUERY
   });
 
-  const paths = toPaths<Post>(data.posts);
+  const paths = toPaths<IPost>(data.posts);
 
   return {
     paths,
@@ -70,4 +70,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default PostDetails;
+export default Post;
