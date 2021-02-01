@@ -31,7 +31,7 @@ const NavContainer = styled.nav`
   }
 `;
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
     <NavContainer>
       <div id="routes">
@@ -62,5 +62,3 @@ const NavBar = () => {
     </NavContainer>
   );
 };
-
-export default NavBar;

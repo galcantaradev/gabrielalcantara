@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
 
-import NavBar from './NavBar';
+import { NavBar } from './NavBar';
 
 interface LayoutProps {
   children: ReactNode;
@@ -20,7 +20,7 @@ const Content = styled.div`
   width: 42rem;
 `;
 
-const Layout = (props: LayoutProps) => {
+export const Layout = (props: LayoutProps) => {
   return (
     <Container>
       <Head>
@@ -33,5 +33,3 @@ const Layout = (props: LayoutProps) => {
     </Container>
   );
 };
-
-export default Layout;

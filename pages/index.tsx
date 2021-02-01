@@ -1,5 +1,4 @@
-import Layout from '../components/Layout';
-import SectionTitle from '../components/SectionTitle';
+import { Layout, SectionTitle } from '../components';
 
 const Home = () => {
   return (

@@ -7,8 +7,6 @@ interface SectionTitleProps {
 
 const StyledSectionTitle = styled.h2``;
 
-const SectionTitle = (props: SectionTitleProps) => {
+export const SectionTitle = (props: SectionTitleProps) => {
   return <StyledSectionTitle>{props.children}</StyledSectionTitle>;
 };
-
-export default SectionTitle;
