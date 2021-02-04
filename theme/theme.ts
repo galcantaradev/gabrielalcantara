@@ -1,16 +1,19 @@
 export interface Theme {
   background: string;
   text: string;
+  green: string;
 }
 
 export const light: Theme = {
-  background: '#f1f1f1',
-  text: '#000'
+  background: '#f9fafb',
+  text: '#000',
+  green: '#00A170'
 };
 
 export const dark: Theme = {
   background: '#101010',
-  text: '#fff'
+  text: '#fff',
+  green: '#00A170'
 };
 
 declare module 'styled-components' {

@@ -19,10 +19,11 @@ export const GlobalStyle = createGlobalStyle`
   a, svg {
     color: inherit;
     text-decoration: none;
-    transition: ease color 300ms;
 
     :hover {
+      color: ${props => props.theme.green};
       cursor: pointer;
+      transition: ease color 300ms;
     }
   }
 `;

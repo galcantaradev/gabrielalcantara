@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
+import styled from 'styled-components';
 
-interface SectionTitleProps {
-  children: ReactNode;
-}
-
-export const SectionTitle = (props: SectionTitleProps) => {
-  return <h2>{props.children}</h2>;
-};
+export const SectionTitle = styled.h1`
+  font-size: 1.5rem;
+  margin: 0;
+`;

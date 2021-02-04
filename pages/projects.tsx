@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 import { GetStaticProps } from 'next';
-import { Fragment } from 'react';
+import Head from 'next/head';
 
-import { Layout } from '../components';
+import { Layout, SectionTitle } from '../components';
 import { apolloClient } from '../lib';
 import { IProject } from '../types';
 
@@ -27,14 +27,10 @@ const PROJECTS_QUERY = gql`
 const Projects = (props: Props) => {
   return (
     <Layout>
-      {props.projects.map(project => {
-        return (
-          <Fragment key={project.id}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-          </Fragment>
-        );
-      })}
+      <Head>
+        <title>Gabriel Alcântara • Projetos</title>
+      </Head>
+      <SectionTitle>🛠 Em construção</SectionTitle>
     </Layout>
   );
 };

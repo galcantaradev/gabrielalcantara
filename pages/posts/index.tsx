@@ -1,10 +1,9 @@
 import { gql } from '@apollo/client';
-import { Fragment } from 'react';
 import { GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 import { apolloClient } from '../../lib';
-import { Layout } from '../../components';
+import { Layout, PostItem } from '../../components';
 import { IPost } from '../../types';
 
 interface Props {
@@ -14,32 +13,28 @@ interface Props {
 const POSTS_QUERY = gql`
   query Posts {
     posts {
-      id
+      slug
       title
       description
-      updoot
       readTime
       createdAt
-      updatedAt
+      tags {
+        name
+        slug
+      }
     }
   }
 `;
 
 const Posts = (props: Props) => {
-  const router = useRouter();
-
   return (
     <Layout>
-      {props.posts.map(post => {
-        return (
-          <Fragment key={post.id}>
-            <h3 onClick={() => router.push(`/posts/${post.id}`)}>
-              {post.title}
-            </h3>
-            <small>{post.description}</small>
-          </Fragment>
-        );
-      })}
+      <Head>
+        <title>Gabriel Alcântara • Publicações</title>
+      </Head>
+      {props.posts.map(post => (
+        <PostItem key={post.id} post={post} />
+      ))}
     </Layout>
   );
 };

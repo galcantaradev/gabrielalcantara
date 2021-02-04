@@ -14,9 +14,10 @@ const Container = styled.div`
   flex-grow: 1;
 `;
 
-const Content = styled.div`
+const Content = styled.main`
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5rem;
   width: 42rem;
 `;
 
@@ -26,10 +27,8 @@ export const Layout = (props: LayoutProps) => {
       <Head>
         <title>Gabriel Alcântara</title>
       </Head>
-      <Content>
-        <NavBar />
-        {props.children}
-      </Content>
+      <NavBar />
+      <Content>{props.children}</Content>
     </Container>
   );
 };

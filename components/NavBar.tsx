@@ -11,7 +11,10 @@ import {
 
 const NavContainer = styled.nav`
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1rem 0 1rem 0;
+  width: 42rem;
 
   #routes {
     display: inherit;
