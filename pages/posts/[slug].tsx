@@ -7,18 +7,15 @@ import styled from 'styled-components';
 
 import { Layout, SectionTitle } from '../../components';
 import { apolloClient } from '../../lib';
-import { toPaths } from '../../utils';
 import { IPost } from '../../types';
 
 interface Props {
   post: IPost;
 }
 
-const POSTS_QUERY = gql`
-  query Posts {
-    posts {
-      slug
-    }
+const SLUGS_QUERY = gql`
+  query Slugs {
+    slugs
   }
 `;
 
@@ -65,7 +62,7 @@ const Post = (props: Props) => {
   return (
     <Layout>
       <Head>
-        <title>Gabriel Alcântara • {post.title}</title>
+        <title>{post.title} • Gabriel Alcântara</title>
       </Head>
       <PostContainer>
         <PostTitle>{post.title}</PostTitle>
@@ -79,11 +76,17 @@ const Post = (props: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await apolloClient.query<{ posts: IPost[] }>({
-    query: POSTS_QUERY
+  const { data } = await apolloClient.query<{ slugs: string[] }>({
+    query: SLUGS_QUERY
   });
 
-  const paths = toPaths<IPost>(data.posts, 'slug');
+  const paths = data.slugs.map(slug => {
+    return {
+      params: {
+        slug
+      }
+    };
+  });
 
   return {
     paths,
@@ -103,7 +106,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      post: { ...data.post, markdown }
+      post: {
+        ...data.post,
+        markdown
+      }
     }
   };
 };

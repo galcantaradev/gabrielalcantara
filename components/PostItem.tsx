@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { SectionTitle } from './SectionTitle';
@@ -29,7 +29,6 @@ const Article = styled.article`
 
 export const PostItem = (props: Props) => {
   const { post } = props;
-  const router = useRouter();
 
   const createdAt = Intl.DateTimeFormat('pt-BR', {
     year: 'numeric',
@@ -39,9 +38,9 @@ export const PostItem = (props: Props) => {
 
   return (
     <Article>
-      <SectionTitle onClick={() => router.push(`/posts/${post.slug}`)}>
-        {post.title}
-      </SectionTitle>
+      <Link href={`/posts/${post.slug}`}>
+        <SectionTitle>{post.title}</SectionTitle>
+      </Link>
       <small>
         ☕️ {post.readTime} mins de leitura • {createdAt}
       </small>
