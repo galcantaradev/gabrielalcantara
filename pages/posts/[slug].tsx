@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import styled from 'styled-components';
 
 import { Layout, SectionTitle } from '../../components';
@@ -31,16 +32,23 @@ const POST_BY_SLUG = gql`
   }
 `;
 
+const PostContainer = styled.article`
+  box-sizing: border-box;
+  display: block;
+  line-height: 1.6;
+  text-align: center;
+`;
+
 const PostTitle = styled(SectionTitle)`
   color: ${props => props.theme.green};
   font-size: 2.5rem;
-  text-align: center;
 `;
 
 const PostInfo = styled.p`
   font-size: 0.75rem;
-  text-align: center;
 `;
+
+const PostContent = styled.div``;
 
 const Post = (props: Props) => {
   const { post } = props;
@@ -53,10 +61,16 @@ const Post = (props: Props) => {
 
   return (
     <Layout>
-      <PostTitle>{post.title}</PostTitle>
-      <PostInfo>
-        ☕️ {post.readTime} mins de leitura • {createdAt}
-      </PostInfo>
+      <Head>
+        <title>Gabriel Alcântara • {post.title}</title>
+      </Head>
+      <PostContainer>
+        <PostTitle>{post.title}</PostTitle>
+        <PostInfo>
+          ☕️ {post.readTime} mins de leitura • {createdAt}
+        </PostInfo>
+        <PostContent>{post.markdown}</PostContent>
+      </PostContainer>
     </Layout>
   );
 };

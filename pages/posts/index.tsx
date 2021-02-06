@@ -32,8 +32,8 @@ const Posts = (props: Props) => {
       <Head>
         <title>Gabriel Alcântara • Publicações</title>
       </Head>
-      {props.posts.map(post => (
-        <PostItem key={post.id} post={post} />
+      {props.posts.map((post: IPost, index: number) => (
+        <PostItem key={`${post.id}_${index}`} post={post} />
       ))}
     </Layout>
   );
