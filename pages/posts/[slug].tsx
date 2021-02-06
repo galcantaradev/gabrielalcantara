@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import renderToString from 'next-mdx-remote/render-to-string';
-import hydrate from 'next-mdx-remote/hydrate';
+import remark from 'remark';
+import html from 'remark-html';
 import styled from 'styled-components';
 
 import { Layout, SectionTitle } from '../../components';
@@ -69,7 +69,7 @@ const Post = (props: Props) => {
         <PostInfo>
           ☕️ {post.readTime} mins de leitura • {createdAt}
         </PostInfo>
-        <PostContent>{hydrate(post.markdown)}</PostContent>
+        <PostContent dangerouslySetInnerHTML={{ __html: post.markdown }} />
       </PostContainer>
     </Layout>
   );
@@ -102,7 +102,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   });
 
-  const markdown = await renderToString(data.post.markdown);
+  const processedMarkdown = await remark()
+    .use(html)
+    .process(data.post.markdown);
+  const markdown = processedMarkdown.toString();
 
   return {
     props: {
