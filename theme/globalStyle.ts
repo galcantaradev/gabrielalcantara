@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.text};
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     width: 100vw;

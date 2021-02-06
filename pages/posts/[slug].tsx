@@ -13,6 +13,10 @@ interface Props {
   post: IPost;
 }
 
+interface IPostInfo {
+  size: 'small' | 'normal';
+}
+
 const SLUGS_QUERY = gql`
   query Slugs {
     slugs
@@ -34,20 +38,24 @@ const POST_BY_SLUG = gql`
 const PostContainer = styled.article`
   box-sizing: border-box;
   display: block;
+`;
+
+const PostHeader = styled.div`
   text-align: center;
 `;
 
 const PostTitle = styled(SectionTitle)`
   color: ${props => props.theme.green};
-  font-size: 2.5rem;
+  font-size: 2rem;
 `;
 
-const PostInfo = styled.p`
-  font-size: 0.75rem;
+const PostInfo = styled.p<IPostInfo>`
+  font-size: ${props => (props.size === 'small' ? '0.75rem' : '')};
+  margin: 0;
 `;
 
 const PostContent = styled.div`
-  line-height: 1.6;
+  margin-top: 2rem;
 `;
 
 const Post = (props: Props) => {
@@ -65,10 +73,13 @@ const Post = (props: Props) => {
         <title>{post.title} • Gabriel Alcântara</title>
       </Head>
       <PostContainer>
-        <PostTitle>{post.title}</PostTitle>
-        <PostInfo>
-          ☕️ {post.readTime} mins de leitura • {createdAt}
-        </PostInfo>
+        <PostHeader>
+          <PostTitle>{post.title}</PostTitle>
+          <PostInfo size="small">
+            ☕️ {post.readTime} min de leitura • {createdAt}
+          </PostInfo>
+          <PostInfo size="normal">{post.description}</PostInfo>
+        </PostHeader>
         <PostContent dangerouslySetInnerHTML={{ __html: post.markdown }} />
       </PostContainer>
     </Layout>

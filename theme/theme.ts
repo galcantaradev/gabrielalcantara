@@ -11,7 +11,7 @@ export const light: Theme = {
 };
 
 export const dark: Theme = {
-  background: '#0d0d0d',
+  background: '#0d1117',
   text: '#fff',
   green: '#00A170'
 };
