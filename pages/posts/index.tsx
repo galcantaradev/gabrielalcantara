@@ -40,7 +40,7 @@ const Posts = (props: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await apolloClient.query({
+  const { data } = await apolloClient.query<{ posts: IPost[] }>({
     query: POSTS_QUERY
   });
 

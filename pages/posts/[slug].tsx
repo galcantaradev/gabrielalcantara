@@ -1,6 +1,8 @@
 import { gql } from '@apollo/client';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
+import renderToString from 'next-mdx-remote/render-to-string';
+import hydrate from 'next-mdx-remote/hydrate';
 import styled from 'styled-components';
 
 import { Layout, SectionTitle } from '../../components';
@@ -22,7 +24,7 @@ const POSTS_QUERY = gql`
 
 const POST_BY_SLUG = gql`
   query PostBySlug($slug: String!) {
-    postBySlug(slug: $slug) {
+    post: postBySlug(slug: $slug) {
       title
       description
       markdown
@@ -35,7 +37,6 @@ const POST_BY_SLUG = gql`
 const PostContainer = styled.article`
   box-sizing: border-box;
   display: block;
-  line-height: 1.6;
   text-align: center;
 `;
 
@@ -48,7 +49,9 @@ const PostInfo = styled.p`
   font-size: 0.75rem;
 `;
 
-const PostContent = styled.div``;
+const PostContent = styled.div`
+  line-height: 1.6;
+`;
 
 const Post = (props: Props) => {
   const { post } = props;
@@ -69,14 +72,14 @@ const Post = (props: Props) => {
         <PostInfo>
           ☕️ {post.readTime} mins de leitura • {createdAt}
         </PostInfo>
-        <PostContent>{post.markdown}</PostContent>
+        <PostContent>{hydrate(post.markdown)}</PostContent>
       </PostContainer>
     </Layout>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await apolloClient.query({
+  const { data } = await apolloClient.query<{ posts: IPost[] }>({
     query: POSTS_QUERY
   });
 
@@ -89,16 +92,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { data } = await apolloClient.query({
+  const { data } = await apolloClient.query<{ post: IPost }>({
     query: POST_BY_SLUG,
     variables: {
       slug: params.slug
     }
   });
 
+  const markdown = await renderToString(data.post.markdown);
+
   return {
     props: {
-      post: data.postBySlug
+      post: { ...data.post, markdown }
     }
   };
 };

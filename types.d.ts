@@ -13,7 +13,7 @@ export interface IPost {
   slug: string;
   title: string;
   description: string;
-  markdown: string;
+  markdown: string | MdxRemote.Source;
   readTime: number;
   tags: ITag[];
   locale: Locale;
