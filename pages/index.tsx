@@ -1,10 +1,9 @@
-import Layout from '../components/Layout';
-import SectionTitle from '../components/SectionTitle';
+import { Layout } from '../components';
 
 const Home = () => {
   return (
     <Layout>
-      <SectionTitle>E aí!</SectionTitle>
+      <h2>E aí!</h2>
       <p>
         Me chamo Gabriel, sou engenheiro de software e desenvolvedor front-end.
       </p>
@@ -26,7 +25,7 @@ const Home = () => {
         Basicamente, é isso... Se quiser trocar uma ideia, é só me chamar em
         alguma das redes que disponibilizei ali.
       </p>
-      <p>Tamo junto!</p>
+      <p>Tamo junto! ✌🏼</p>
     </Layout>
   );
 };
