@@ -5,7 +5,7 @@ export const formattedTags = (tags: string[]): string => {
         return tag;
       }
 
-      return `${tag} • `;
+      return `${tag}, `;
     })
     ?.join('');
 };

@@ -41,7 +41,7 @@ export const PostItem = (props: Props) => {
         <FormattedDate value={post.createdAt} />
       </small>
       <p>{post.description}</p>
-      <small>{formattedTags(post.tags)}</small>
+      <small>🏷 {formattedTags(post.tags)}</small>
     </Article>
   );
 };
