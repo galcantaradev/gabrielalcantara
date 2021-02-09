@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 
 import { NavBar } from './NavBar';
+import { SectionTitle } from './SectionTitle';
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,8 +18,12 @@ const Container = styled.div`
 const Content = styled.main`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 42rem;
+
+  ${SectionTitle} {
+    margin: 0;
+  }
 `;
 
 export const Layout = (props: LayoutProps) => {

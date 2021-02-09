@@ -1,24 +1,15 @@
-export type Locale = 'ptBr' | 'enUs';
-
-export interface ITag {
-  id: string;
-  name: string;
-  slug: string;
-  createdAt: string;
-  updatedAt: string;
+export interface IPostInfo {
+  size: 'small' | 'normal';
 }
 
 export interface IPost {
   id: string;
-  slug: string;
   title: string;
   description: string;
-  markdown: string | MdxRemote.Source;
+  markdown: string;
   readTime: number;
-  tags: ITag[];
-  locale: Locale;
+  tags: string[];
   createdAt: string;
-  updatedAt: string;
 }
 
 export interface IProject {
@@ -27,7 +18,5 @@ export interface IProject {
   description: string;
   imageUri: string;
   link: string;
-  locale: Locale;
   createdAt: string;
-  updatedAt: string;
 }
