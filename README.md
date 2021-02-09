@@ -1,7 +1,7 @@
 # [gabrielalcantara](https://gabrielalcantara.com.br)
 
 
-## en-us
+## en
 Source of my personal website, blog and portfolio.
 
 It was built using these libraries:
@@ -19,7 +19,7 @@ To run locally:
 
 ---
 
-## pt-br
+## pt
 Fonte do meu site pessoal, blog e portfólio.
 
 Foi construído utilizando as bibliotecas:
