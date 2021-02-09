@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { SectionTitle } from './SectionTitle';
+import { FormattedDate } from './FormattedDate';
 import { IPost } from '../types';
 import { formattedTags } from '../utils';
 
@@ -30,19 +31,14 @@ const Article = styled.article`
 export const PostItem = (props: Props) => {
   const { post } = props;
 
-  const createdAt = Intl.DateTimeFormat('pt-BR', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  }).format(new Date(post.createdAt));
-
   return (
     <Article>
-      <Link href={`/posts/${post.slug}`}>
+      <Link href={`/posts/${post.id}`}>
         <SectionTitle>{post.title}</SectionTitle>
       </Link>
       <small>
-        ☕️ {post.readTime} mins de leitura • {createdAt}
+        ☕️ {post.readTime} {post.readTime > 1 ? 'mins' : 'min'} de leitura •{' '}
+        <FormattedDate value={post.createdAt} />
       </small>
       <p>{post.description}</p>
       <small>{formattedTags(post.tags)}</small>
