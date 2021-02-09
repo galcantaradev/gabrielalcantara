@@ -10,3 +10,8 @@ Foi construído utilizando as bibliotecas:
 - [remark](https://github.com/remarkjs/remark)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 - [date-fns](https://github.com/date-fns/date-fns)
+
+Para executar o projeto local:
+- Baixe ou clone o projeto
+- `yarn` para instalar as dependências
+- `yarn dev` e abra http://localhost:3000
