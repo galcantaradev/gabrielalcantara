@@ -29,6 +29,19 @@ const NavContainer = styled.nav`
     a {
       margin-left: 1rem;
     }
+
+    @media only screen and (max-width: 450px) {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      a {
+        margin-bottom: 0.2rem;
+      }
+    }
   }
 `;
 
