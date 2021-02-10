@@ -22,4 +22,4 @@ Espero que curtam!
 
 ## Referências
 
-[Deciding to write a coding blog... Should I? ](https://dev.to/alserembani94/deciding-to-write-a-coding-blog-should-i-5cml?signin=true)'
+[Deciding to write a coding blog... Should I? ](https://dev.to/alserembani94/deciding-to-write-a-coding-blog-should-i-5cml?signin=true)
