@@ -12,14 +12,19 @@ interface LayoutProps {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 const Content = styled.main`
-  margin-left: auto;
-  margin-right: auto;
+  align-items: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 3rem;
-  width: 42rem;
 
   ${SectionTitle} {
     margin: 0;

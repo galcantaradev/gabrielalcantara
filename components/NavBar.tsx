@@ -10,11 +10,9 @@ import {
 } from '../icons/Icons';
 
 const NavContainer = styled.nav`
+  align-items: space-between;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
   padding: 1rem 0 1rem 0;
-  width: 42rem;
 
   #routes {
     display: inherit;
