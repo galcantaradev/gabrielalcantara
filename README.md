@@ -14,3 +14,7 @@ It was built using these libraries:
 To run locally:
 - `yarn` to install dependencies
 - `yarn dev` then open http://localhost:3000
+
+## References
+- [Overreacted](https://overreacted.io/)
+- [Alan Secundo](http://alansecundo.com/)
