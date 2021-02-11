@@ -2,7 +2,7 @@
 title: 'Introdução'
 description: 'Introdução e motivações por trás deste blog.'
 readTime: '1'
-tags: ['real']
+tags: ['pessoal']
 createdAt: '2021-02-07'
 ---
 
