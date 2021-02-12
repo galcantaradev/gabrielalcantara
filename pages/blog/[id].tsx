@@ -10,26 +10,26 @@ interface Props {
   post: IPost;
 }
 
-const PostContainer = styled.article`
+const Container = styled.article`
   box-sizing: border-box;
   display: block;
 `;
 
-const PostHeader = styled.div`
+const Header = styled.div`
   text-align: center;
 `;
 
-const PostTitle = styled(SectionTitle)`
+const Title = styled(SectionTitle)`
   color: ${props => props.theme.green};
   font-size: 2rem;
 `;
 
-const PostInfo = styled.p<IPostInfo>`
+const Info = styled.p<IPostInfo>`
   font-size: ${props => (props.size === 'small' ? '0.75rem' : '')};
   margin: 0;
 `;
 
-const PostContent = styled.div`
+const Content = styled.div`
   margin-top: 3rem;
 
   p {
@@ -46,17 +46,17 @@ const Post = (props: Props) => {
       <Head>
         <title>{post.title} • Gabriel Alcântara</title>
       </Head>
-      <PostContainer>
-        <PostHeader>
-          <PostTitle>{post.title}</PostTitle>
-          <PostInfo size="small">
+      <Container>
+        <Header>
+          <Title>{post.title}</Title>
+          <Info size="small">
             ☕️ {post.readTime} min de leitura •{' '}
             <FormattedDate value={post.createdAt} />
-          </PostInfo>
-          <PostInfo size="normal">{post.description}</PostInfo>
-        </PostHeader>
-        <PostContent dangerouslySetInnerHTML={{ __html: post.markdown }} />
-      </PostContainer>
+          </Info>
+          <Info size="normal">{post.description}</Info>
+        </Header>
+        <Content dangerouslySetInnerHTML={{ __html: post.markdown }} />
+      </Container>
     </Layout>
   );
 };

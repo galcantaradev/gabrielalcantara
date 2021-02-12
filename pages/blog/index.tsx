@@ -10,12 +10,14 @@ interface Props {
 }
 
 const Blog = (props: Props) => {
+  const { posts } = props;
+
   return (
     <Layout>
       <Head>
         <title>Gabriel Alcântara • Blog</title>
       </Head>
-      {props.posts.map((post: IPost, index: number) => (
+      {posts.map((post: IPost, index: number) => (
         <PostItem key={`${post.id}_${index}`} post={post} />
       ))}
     </Layout>
