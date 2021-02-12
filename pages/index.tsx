@@ -25,7 +25,7 @@ const Home = () => {
         Basicamente, é isso... Se quiser trocar uma ideia, é só me chamar em
         alguma das redes que disponibilizei ali.
       </p>
-      <p>Tamo junto! ✌🏼</p>
+      <p>Tamo junto!</p>
     </Layout>
   );
 };

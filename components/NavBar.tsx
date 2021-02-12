@@ -30,7 +30,7 @@ const NavContainer = styled.nav`
       margin-left: 1rem;
     }
 
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 375px) {
       display: flex;
       flex-direction: column;
       margin: 1rem 1rem;
@@ -39,7 +39,7 @@ const NavContainer = styled.nav`
       top: 0;
 
       a {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -50,26 +50,40 @@ export const NavBar = () => {
     <NavContainer>
       <div id="routes">
         <Link href="/">Início</Link>
-        <Link href="/posts">Publicações</Link>
-        <Link href="/projects">Projetos</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/portfolio">Portfólio</Link>
       </div>
       <div id="links">
-        <a href="https://github.com/galcantaradev" target="_blank">
+        <a
+          href="https://github.com/galcantaradev"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+        >
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
         <a
           href="https://www.linkedin.com/in/gabriel-alc%C3%A2ntara-4b7890120/"
           target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
         >
           <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
         </a>
         <a
           href="https://stackoverflow.com/users/14178125/gabriel-alc%c3%a2ntara"
           target="_blank"
+          rel="noopener"
+          aria-label="Stack Overflow"
         >
           <FontAwesomeIcon icon={faStackOverflow} size="lg" />
         </a>
-        <a href="https://twitter.com/galcantaradev" target="_blank">
+        <a
+          href="https://twitter.com/galcantaradev"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+        >
           <FontAwesomeIcon icon={faTwitter} size="lg" />
         </a>
       </div>

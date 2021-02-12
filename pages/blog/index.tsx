@@ -9,11 +9,11 @@ interface Props {
   posts: IPost[];
 }
 
-const Posts = (props: Props) => {
+const Blog = (props: Props) => {
   return (
     <Layout>
       <Head>
-        <title>Gabriel Alcântara • Publicações</title>
+        <title>Gabriel Alcântara • Blog</title>
       </Head>
       {props.posts.map((post: IPost, index: number) => (
         <PostItem key={`${post.id}_${index}`} post={post} />
@@ -32,4 +32,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Posts;
+export default Blog;

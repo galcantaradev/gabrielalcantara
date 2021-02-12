@@ -8,7 +8,7 @@ interface Props {
   projects: IProject[];
 }
 
-const Projects = (props: Props) => {
+const Portfolio = (props: Props) => {
   return (
     <Layout>
       <Head>
@@ -27,4 +27,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default Projects;
+export default Portfolio;

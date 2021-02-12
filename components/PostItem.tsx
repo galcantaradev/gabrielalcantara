@@ -33,7 +33,7 @@ export const PostItem = (props: Props) => {
 
   return (
     <Article>
-      <Link href={`/posts/${post.id}`}>
+      <Link href={`/blog/${post.id}`}>
         <SectionTitle>{post.title}</SectionTitle>
       </Link>
       <small>
