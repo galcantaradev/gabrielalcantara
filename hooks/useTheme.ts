@@ -34,6 +34,7 @@ export const useTheme = () => {
   };
 
   return {
-    theme
+    theme,
+    isDark: dark.background === theme.background
   } as const;
 };

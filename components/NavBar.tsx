@@ -60,7 +60,7 @@ export const NavBar = () => {
           rel="noopener"
           aria-label="GitHub"
         >
-          <FontAwesomeIcon icon={faGithub} size="lg" />
+          <FontAwesomeIcon icon={faGithub} size="lg" height="21" width="21" />
         </a>
         <a
           href="https://www.linkedin.com/in/gabriel-alc%C3%A2ntara-4b7890120/"
@@ -68,7 +68,12 @@ export const NavBar = () => {
           rel="noopener"
           aria-label="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+          <FontAwesomeIcon
+            icon={faLinkedinIn}
+            size="lg"
+            height="21"
+            width="21"
+          />
         </a>
         <a
           href="https://stackoverflow.com/users/14178125/gabriel-alc%c3%a2ntara"
@@ -76,7 +81,12 @@ export const NavBar = () => {
           rel="noopener"
           aria-label="Stack Overflow"
         >
-          <FontAwesomeIcon icon={faStackOverflow} size="lg" />
+          <FontAwesomeIcon
+            icon={faStackOverflow}
+            size="lg"
+            height="21"
+            width="21"
+          />
         </a>
         <a
           href="https://twitter.com/galcantaradev"
@@ -84,7 +94,7 @@ export const NavBar = () => {
           rel="noopener"
           aria-label="Twitter"
         >
-          <FontAwesomeIcon icon={faTwitter} size="lg" />
+          <FontAwesomeIcon icon={faTwitter} size="lg" height="21" width="21" />
         </a>
       </div>
     </NavContainer>
