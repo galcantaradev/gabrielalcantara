@@ -58,6 +58,7 @@ export const NavBar = () => {
           href="https://github.com/galcantaradev"
           target="_blank"
           rel="noopener"
+          data-testid="github-icon"
           aria-label="GitHub"
         >
           <FontAwesomeIcon icon={faGithub} size="lg" height="21" width="21" />
@@ -66,6 +67,7 @@ export const NavBar = () => {
           href="https://www.linkedin.com/in/gabriel-alc%C3%A2ntara-4b7890120/"
           target="_blank"
           rel="noopener"
+          data-testid="linkedin-icon"
           aria-label="LinkedIn"
         >
           <FontAwesomeIcon
@@ -79,6 +81,7 @@ export const NavBar = () => {
           href="https://stackoverflow.com/users/14178125/gabriel-alc%c3%a2ntara"
           target="_blank"
           rel="noopener"
+          data-testid="stackoverflow-icon"
           aria-label="Stack Overflow"
         >
           <FontAwesomeIcon
@@ -92,6 +95,7 @@ export const NavBar = () => {
           href="https://twitter.com/galcantaradev"
           target="_blank"
           rel="noopener"
+          data-testid="twitter-icon"
           aria-label="Twitter"
         >
           <FontAwesomeIcon icon={faTwitter} size="lg" height="21" width="21" />

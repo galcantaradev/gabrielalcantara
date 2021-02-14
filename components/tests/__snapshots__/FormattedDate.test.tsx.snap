@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormattedDate.test.tsx should render formatted date 1`] = `
+<DocumentFragment>
+  01/01/2021
+</DocumentFragment>
+`;

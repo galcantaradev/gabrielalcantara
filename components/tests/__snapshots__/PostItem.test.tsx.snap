@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostItem.test.tsx should render correctly 1`] = `
+<DocumentFragment>
+  <article
+    class="PostItem__Article-v55yx6-0 gnRnNm"
+  >
+    <h1
+      class="SectionTitle-sc-15x45w6-0 fzzHJf"
+    >
+      Post Title
+    </h1>
+    <small>
+      ☕️ 0 min de leitura • 01/01/2021
+    </small>
+    <p>
+      Post Description
+    </p>
+    <small>
+      🏷 react, jest, react testing library
+    </small>
+  </article>
+</DocumentFragment>
+`;

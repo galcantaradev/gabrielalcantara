@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionTitle.test.tsx should render correctly 1`] = `
+<DocumentFragment>
+  <h1
+    class="SectionTitle-sc-15x45w6-0 fzzHJf"
+  >
+    Title
+  </h1>
+</DocumentFragment>
+`;
