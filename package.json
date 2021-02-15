@@ -17,7 +17,8 @@
     "start": "next start",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --collect-coverage"
+    "test:coverage": "jest --collect-coverage",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -43,6 +44,9 @@
     "@typescript-eslint/parser": "^4.14.1",
     "babel-jest": "^26.6.3",
     "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"

@@ -12,7 +12,7 @@ const Portfolio = (props: Props) => {
   return (
     <Layout>
       <Head>
-        <title>Gabriel Alcântara • Projetos</title>
+        <title>Gabriel Alcântara • Portfólio</title>
       </Head>
       <SectionTitle>🛠 Em construção</SectionTitle>
     </Layout>
