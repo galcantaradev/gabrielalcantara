@@ -10,6 +10,8 @@ It was built using these libraries:
 - [remark](https://github.com/remarkjs/remark)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 - [date-fns](https://github.com/date-fns/date-fns)
+- [Jest](https://github.com/facebook/jest)
+- [React Testing Library](https://github.com/testing-library/react-testing-library)
 
 To run locally:
 - `yarn` to install dependencies
