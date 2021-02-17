@@ -6,7 +6,7 @@ import html from 'remark-html';
 
 import { IPost } from '../types';
 
-const directory = path.join(process.cwd(), 'posts');
+const directory = path.join(process.cwd(), 'blog');
 
 export const getPostsIds = () => {
   const fileNames = fs.readdirSync(directory);
