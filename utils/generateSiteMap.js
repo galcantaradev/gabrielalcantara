@@ -3,14 +3,10 @@ const globby = require('globby');
 const prettier = require('prettier');
 
 const toUrl = (page = '') => {
-  const path = page
+  const route = page
     .replace('pages/', '')
-    .replace('.tsx', '')
-    .replace('.md', '');
-
-  const route = path.includes('index')
-    ? path.replace('/index', '').replace('index', '')
-    : path;
+    .replace(/\.(md|tsx)/, '')
+    .replace(/\/?index/g, '');
 
   return `
     <url>
@@ -19,7 +15,7 @@ const toUrl = (page = '') => {
   `;
 };
 
-const toUrlSet = pages => {
+const siteMap = (pages = []) => {
   return `
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -28,7 +24,7 @@ const toUrlSet = pages => {
   `;
 };
 
-const formattedSiteMap = map => prettier.format(map, { parser: 'html' });
+const formatted = (map = '') => prettier.format(map, { parser: 'html' });
 
 const generateSiteMap = async () => {
   const pages = await globby([
@@ -39,9 +35,7 @@ const generateSiteMap = async () => {
     '!pages/**/[id].tsx'
   ]);
 
-  const siteMap = toUrlSet(pages);
-
-  fs.writeFileSync('public/sitemap.xml', formattedSiteMap(siteMap), {
+  fs.writeFileSync('public/sitemap.xml', formatted(siteMap(pages)), {
     encoding: 'utf-8'
   });
 };
