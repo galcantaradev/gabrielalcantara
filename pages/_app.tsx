@@ -17,12 +17,12 @@ const App = ({ Component, pageProps }) => {
 
         <link
           rel="shortcut icon"
-          href={isDark ? '/dark_favicon.png' : 'light_favicon.png'}
+          href={isDark ? '/dark_favicon.ico' : 'light_favicon.ico'}
         />
 
         {/* <!-- Primary Meta Tags --> */}
-        <meta name="title" content="Gabriel Alcântara" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="title" content="Gabriel Alcântara" />
         <meta name="description" content="Site pessoal, blog e portfólio." />
 
         {/* <!-- Open Graph / Facebook --> */}
