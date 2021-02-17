@@ -1,20 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      
-  <url>
-      <loc>https://gabrielalcantara.com.br/</loc>
-  </url>
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        
+    <url>
+        <loc>https://gabrielalcantara.com.br/</loc>
+    </url>
   
-  <url>
-      <loc>https://gabrielalcantara.com.br/portfolio</loc>
-  </url>
+    <url>
+        <loc>https://gabrielalcantara.com.br/portfolio</loc>
+    </url>
   
-  <url>
-      <loc>https://gabrielalcantara.com.br/blog</loc>
-  </url>
+    <url>
+        <loc>https://gabrielalcantara.com.br/blog</loc>
+    </url>
   
-  <url>
-      <loc>https://gabrielalcantara.com.br/blog/introducao</loc>
-  </url>
+    <url>
+        <loc>https://gabrielalcantara.com.br/blog/introducao</loc>
+    </url>
   
-  </urlset>
+    </urlset>
+  

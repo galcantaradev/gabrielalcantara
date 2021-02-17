@@ -12,8 +12,6 @@ const toUrl = (page = '') => {
     ? path.replace('/index', '').replace('index', '')
     : path;
 
-  console.log(route);
-
   return `
     <url>
         <loc>${`https://gabrielalcantara.com.br/${route}`}</loc>
@@ -30,8 +28,7 @@ const toUrlSet = pages => {
   `;
 };
 
-const formattedSiteMap = siteMap =>
-  prettier.format(siteMap, { parser: 'html' });
+const formattedSiteMap = map => prettier.format(map, { parser: 'html' });
 
 const generateSiteMap = async () => {
   const pages = await globby([
