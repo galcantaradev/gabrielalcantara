@@ -22,6 +22,7 @@ const App = ({ Component, pageProps }) => {
 
         {/* <!-- Primary Meta Tags --> */}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="robots" content="index, follow" />
         <meta name="title" content="Gabriel Alcântara" />
         <meta name="description" content="Site pessoal, blog e portfólio." />
 
