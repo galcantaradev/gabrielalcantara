@@ -14,7 +14,6 @@ export interface IPost {
 
 export interface IProject {
   name: string;
-  description: string;
   imagePath: string;
   link: string;
 }
