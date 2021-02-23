@@ -13,10 +13,8 @@ export interface IPost {
 }
 
 export interface IProject {
-  id: string;
   name: string;
   description: string;
-  imageUri: string;
+  imagePath: string;
   link: string;
-  createdAt: string;
 }
