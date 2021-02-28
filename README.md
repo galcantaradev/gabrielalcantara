@@ -1,6 +1,6 @@
 # [gabrielalcantara](https://gabrielalcantara.com.br)
 
-Código fonte do meu site pessoal, blog e portfólio.
+Código fonte do meu website pessoal, blog e portfólio.
 
 Foi construído utilizando as seguintes libs:
 
