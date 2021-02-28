@@ -1,8 +1,8 @@
 # [gabrielalcantara](https://gabrielalcantara.com.br)
 
-Source of my personal website, blog and portfolio.
+Código fonte do meu site pessoal, blog e portfólio.
 
-It was built using these libraries:
+Foi construído utilizando as seguintes libs:
 
 - [Next.js](https://github.com/vercel/next.js)
 - [TypeScript](https://github.com/microsoft/TypeScript)
@@ -15,12 +15,12 @@ It was built using these libraries:
 - [React Testing Library](https://github.com/testing-library/react-testing-library)
 - [globby](https://github.com/sindresorhus/globby)
 
-To run locally:
+Para executar o projeto local:
 
-- `yarn` to install dependencies
-- `yarn dev` then open http://localhost:3000
+- `yarn` para instalar as dependências
+- `yarn dev` para executar o projeto, o mesmo estará disponível em: http://localhost:3000
 
-## References
+## Referências
 
 - [Overreacted](https://overreacted.io/)
 - [Alan Secundo](http://alansecundo.com/)
