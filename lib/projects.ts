@@ -10,5 +10,10 @@ export const projects: IProject[] = [
     name: 'Pokédalhe',
     imagePath: '/portfolio/pokedalhe.svg',
     link: 'https://github.com/galcantaradev/pokedalhe'
+  },
+  {
+    name: 'Playa',
+    imagePath: '/portfolio/playa.svg',
+    link: 'https://github.com/galcantaradev/playa'
   }
 ];
